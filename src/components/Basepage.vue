@@ -113,32 +113,100 @@ export default {
     dialog: false,
     drawer: null,
     items: [
-      { icon: "contacts", text: "门诊挂号", id: "out_reg" },
-      { icon: "history", text: "划价收款", id: "out_cash" },
-      { icon: "content_copy", text: "交班结算", id: "out_chk" },
-      { icon: "keyboard", text: "发票号管理", id: "out_receipt" },
-      {
-        icon: "keyboard_arrow_up",
+      { icon: "contacts",
+        text: "科室管理", 
         "icon-alt": "keyboard_arrow_down",
-        text: "查询与统计",
-        model: true,
+         model: false,
         children: [
-          { text: "挂号明细", id: "detail_reg" },
-          { text: "收款明细", id: "detail_cash" },
-          { text: "交班明细", id: "detail_chk" },
-          { text: "退号退款明细", id: "detail_undo" },
-          { text: "操作日志", id: "detail_op" }
+          { text: "设置用户及权限", id: "op1",icon: "keyboard" },
+          { text: "手术代码设置", id: "op2" ,icon: "keyboard"},
+          { text: "手术等级设置", id: "op3",icon: "keyboard" },
+          { text: "手术器械设置", id: "op4",icon: "keyboard" },
+          { text: "医嘱组套设置", id: "op5",icon: "keyboard" },
+          { text: "手术知情同意书模板设置", id: "op6",icon: "keyboard" }
+        ]
+      },
+      { icon: "history",
+        text: "手术排班", 
+        "icon-alt": "keyboard_arrow_down",
+         model: false,
+        children: [
+          { text: "病人检索", id: "op11",icon: "content_copy" },
+          { text: "手术申请", id: "op12" ,icon: "content_copy"},
+          { text: "手术安排", id: "op13",icon: "content_copy" },
+          { text: "急诊手术", id: "op14",icon: "content_copy" },
+          { text: "手术通知单", id: "op15",icon: "content_copy" }
+        ]
+      },
+      { icon: "content_copy",
+        text: "术前访视",
+        "icon-alt": "keyboard_arrow_down",
+        model: false,
+        children: [
+          { text: "会诊记录", id: "op21",icon: "content_copy" },
+          { text: "麻醉方案", id: "op22" ,icon: "content_copy"},
+          { text: "谈话记录", id: "op23",icon: "content_copy" }
+        ]
+      },
+      { icon: "keyboard",
+        text: "术中护理",
+        "icon-alt": "keyboard_arrow_down",
+        model: false,
+        children: [
+          { text: "手术记录", id: "op31",icon: "content_copy" },
+          { text: "附加手术", id: "op32" ,icon: "content_copy"},
+          { text: "器械清点", id: "op33",icon: "content_copy" },
+          { text: "紫外线消毒记录", id: "op34",icon: "content_copy" },
+          { text: "手指无菌培养", id: "op35",icon: "content_copy" },
+          { text: "物品无菌检查", id: "op36",icon: "content_copy" },
+          { text: "空气无菌检查", id: "op37",icon: "content_copy" },
+          { text: "手术中空气无菌检查", id: "op38",icon: "content_copy" }
+        ]
+      },      
+      {
+        icon: "settings",
+        "icon-alt": "keyboard_arrow_down",
+        text: "术中麻醉",
+        model: false,
+        children: [
+          { text: "麻醉前确认", id: "op41", icon: "content_copy" },
+          { text: "手术安全核查", id: "op42",icon: "content_copy" },
+          { text: "输血前指征", id: "op43",icon: "content_copy" },
+          { text: "麻醉记录", id: "op44",icon: "content_copy" },
+          { text: "麻醉医嘱", id: "op45",icon: "content_copy" }
         ]
       },
       {
         icon: "settings",
         "icon-alt": "keyboard_arrow_down",
-        text: "管理与维护",
+        text: "麻醉恢复",
         model: false,
         children: [
-          { text: "收费词典查询", id: "mg_dict" },
-          { text: "数据分析", id: "mg_analyse" },
-          { text: "发票管理", id: "mg_invoice" }
+          { text: "二次麻醉评估", id: "op51", icon: "content_copy" },
+          { text: "麻醉药品确认单", id: "op52",icon: "content_copy" },
+          { text: "不良事件", id: "op53",icon: "content_copy" }
+        ]
+      },
+      {
+        icon: "settings",
+        "icon-alt": "keyboard_arrow_down",
+        text: "术后镇痛",
+        model: false,
+        children: [
+          { text: "术后镇痛评估", id: "op61", icon: "content_copy" },
+          { text: "术后跟踪登记", id: "op62",icon: "content_copy" }
+        ]
+      },
+      {
+        icon: "settings",
+        "icon-alt": "keyboard_arrow_down",
+        text: "门诊手术",
+        model: false,
+        children: [
+          { text: "内镜麻醉知情同意书", id: "op71", icon: "content_copy" },
+          { text: "门诊全麻记录单", id: "op72",icon: "content_copy" },
+          { text: "门诊麻醉术前访视", id: "op73",icon: "content_copy" },
+          { text: "无痛人流知情同意书", id: "op74",icon: "content_copy" }
         ]
       },
       { icon: "help", text: "退出登录", id: "logout" }
